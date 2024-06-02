@@ -24,15 +24,10 @@ repositories {
 dependencies {
 
 	// Implementaciónes
-
-	// https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-oauth2-resource-server
-	implementation group: 'org.springframework.boot', name: 'spring-boot-starter-oauth2-resource-server', version: '3.3.0'
-
+	//implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+	implementation 'org.springframework.boot:spring-boot-starter-oauth2-resource-server'
 	implementation 'org.springframework.boot:spring-boot-starter-oauth2-authorization-server'
-
-	// https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-security
-	implementation group: 'org.springframework.boot', name: 'spring-boot-starter-security', version: '3.3.0'
-
+	implementation 'org.springframework.boot:spring-boot-starter-security'
 	implementation 'org.springframework.boot:spring-boot-starter-web'
 
 	// Solo para compilación
@@ -41,6 +36,9 @@ dependencies {
 
 	// Solo para desarrollo
 	developmentOnly 'org.springframework.boot:spring-boot-devtools'
+
+	// Para ejecucion de H2
+	runtimeOnly 'com.h2database:h2'
 
 	// Para pruebas
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'

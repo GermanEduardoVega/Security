@@ -29,7 +29,7 @@ public class SecurityConfiguration {
     @Value("${auth0.audience}")
     private String audience;
 
-    @Value("${spring.security.oauth2.resourceserver.jwt.issuer-uri}")
+    @Value("${spring.security.oauth2.resource-server.jwt.issuer-uri}")
     private String issuer;
 
     @Value("${web.cors.allowed-origins}")
