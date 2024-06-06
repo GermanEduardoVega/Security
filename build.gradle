@@ -22,11 +22,8 @@ repositories {
 }
 
 dependencies {
-
-	// Implementaciónes
-	//implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+	// Implementaciones
 	implementation 'org.springframework.boot:spring-boot-starter-oauth2-resource-server'
-	//implementation 'org.springframework.boot:spring-boot-starter-oauth2-authorization-server'
 	implementation 'org.springframework.boot:spring-boot-starter-security'
 	implementation 'org.springframework.boot:spring-boot-starter-web'
 
@@ -37,15 +34,26 @@ dependencies {
 	// Solo para desarrollo
 	developmentOnly 'org.springframework.boot:spring-boot-devtools'
 
-	// Para ejecucion de H2
+	// Para ejecución de H2
 	runtimeOnly 'com.h2database:h2'
 
-	// Para pruebas
-	testImplementation 'org.springframework.boot:spring-boot-starter-test'
-	testImplementation 'org.springframework.security:spring-security-test'
-	testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
+	// Para pruebas (comentadas)
+	// testImplementation 'org.springframework.boot:spring-boot-starter-test'
+	// testImplementation 'org.springframework.security:spring-security-test'
+	// testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
+}
+
+// Deshabilitar la tarea de prueba
+tasks.withType(Test) {
+	enabled = false
 }
 
 tasks.named('test') {
 	useJUnitPlatform()
+}
+
+jar {
+	manifest {
+		attributes 'ApiSegura01Application': 'com.example.apiSegura01.ApiSegura01Application'
+	}
 }

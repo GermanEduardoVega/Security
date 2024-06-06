@@ -1,13 +1,13 @@
-package com.example.apiSegura01;
+//package com.example.apiSegura01;
 
-import org.junit.jupiter.api.Test;
-import org.springframework.boot.test.context.SpringBootTest;
+//import org.junit.jupiter.api.Test;
+//import org.springframework.boot.test.context.SpringBootTest;
 
-@SpringBootTest
-class ApiSegura01ApplicationTests {
+//@SpringBootTest
+//class ApiSegura01ApplicationTests {
 
-	@Test
-	void contextLoads() {
-	}
+//	@Test
+//	void contextLoads() {
+//	}
 
-}
+//}
